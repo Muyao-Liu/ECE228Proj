@@ -167,7 +167,7 @@ class generator(nn.Module):
         # output10 = image_mask10 * attention_mask10
         output10 = input * attention_mask10
         
-        AllOutPut=output1 + output2 + output3 + output4 + output5 + output6 + output7 + output8 + output9 + output10
+        AllOutPut = output1 + output2 + output3 + output4 + output5 + output6 + output7 + output8 + output9 + output10
         
         return AllOutPut, output1, output2, output3, output4, output5, output6, output7, output8, output9, output10, attention_mask1,attention_mask2,attention_mask3, attention_mask4, attention_mask5, attention_mask6, attention_mask7, attention_mask8,attention_mask9,attention_mask10, image_mask1, image_mask2,image_mask3,image_mask4,image_mask5,image_mask6,image_mask7,image_mask8,image_mask9
 
