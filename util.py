@@ -91,7 +91,12 @@ def edge_smooth(in_path, out_path):
 
 
         
-        
+def cal_gram(x):
+    batch_size, channel, height, width = x.shape
+    x_flat = x.reshape((batch_size, channel, -1))
+    x_flat_t = torch.transpose(x_flat, 1, 2)
+    gram = torch.bmm(x_flat, x_flat_t)
+    return gram / (channel * height * width)
         
         
         
